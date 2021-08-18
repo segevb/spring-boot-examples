@@ -21,7 +21,8 @@ mvn compile'''
 
     stage('Test {mvn test}') {
       steps {
-        sh 'mvn test'
+        sh '''cd spring-boot-package-war
+mvn test'''
       }
     }
 
