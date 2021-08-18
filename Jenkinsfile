@@ -19,5 +19,11 @@ mvn compile'''
       }
     }
 
+    stage('Test {mvn test}') {
+      steps {
+        sh 'mvn test'
+      }
+    }
+
   }
 }
