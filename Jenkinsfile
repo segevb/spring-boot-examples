@@ -12,5 +12,11 @@ pipeline {
       }
     }
 
+    stage('Maven compile - {mvn build}') {
+      steps {
+        sh 'mvn build'
+      }
+    }
+
   }
 }
