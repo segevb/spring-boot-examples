@@ -22,7 +22,7 @@ mvn compile'''
     stage('Test {mvn test}') {
       steps {
         sh '''cd spring-boot-package-war
-mvn test'''
+mvn test -Dtest=TestCircle#xyz test'''
       }
     }
 
