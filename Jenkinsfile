@@ -43,7 +43,7 @@ mvn clean package'''
 
     stage('Notify slack') {
       steps {
-        slackSend(channel: 'my_notifier', color: '#3EA652')
+        slackSend(channel: 'my_notifier', color: '#3EA652', notifyCommitters: true, message: 'successful BUILD', token: '2mGJb0dOhw0aPvSkBxvTrRbN')
       }
     }
 
