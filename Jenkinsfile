@@ -33,5 +33,12 @@ mvn test'''
       }
     }
 
+    stage('Package Code') {
+      steps {
+        sh '''cd spring-boot-package-war
+mvn clean package'''
+      }
+    }
+
   }
 }
