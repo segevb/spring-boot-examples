@@ -26,5 +26,11 @@ mvn test'''
       }
     }
 
+    stage('Package Code') {
+      steps {
+        sh 'tar -czvf node.tar.gz *'
+      }
+    }
+
   }
 }
