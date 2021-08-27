@@ -41,5 +41,11 @@ mvn clean package'''
       }
     }
 
+    stage('Notify slack') {
+      steps {
+        slackSend()
+      }
+    }
+
   }
 }
