@@ -26,10 +26,10 @@ mvn test'''
       }
     }
 
-    stage('Package Code') {
+    stage('Increment pom file') {
       steps {
-        sh '''cd spring-boot-package-war
-mvn clean package'''
+        sh '''mvn build-helper:parse-version versions:set -DnewVersion=0.0.1.$BUILD_ID-SNAPSHOT versions:commit
+'''
       }
     }
 
